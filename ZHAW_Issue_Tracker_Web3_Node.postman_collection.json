@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "d8bf50a6-5f9a-4fa8-8626-68769986f567",
+		"name": "ZHAW_Issue_Tracker_Web3_Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "projectAPI",
+			"item": [
+				{
+					"name": "localhost:3000/api/projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/projects/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/projects/a49829b9-b2c8-4712-a57b-866e3c5c28f6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"a49829b9-b2c8-4712-a57b-866e3c5c28f6"
+							]
+						},
+						"description": "GET request to retrieve all projects"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"createdAt\": \"2018-09-28T16:49:13.114Z\",\n  \"updatedAt\": \"2018-09-28T16:49:13.114Z\",\n  \"clientId\": \"string\",\n  \"title\": \"string\",\n  \"active\": true\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"createdAt\": \"2018-09-28T16:49:13.114Z\",\n  \"updatedAt\": \"2018-09-28T16:49:13.114Z\",\n  \"clientId\": \"string\",\n  \"title\": \"string\",\n  \"active\": true\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"cecc8e08-8f55-487a-8fe9-9fb1be37a99d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"cecc8e08-8f55-487a-8fe9-9fb1be37a99d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "issueAPI",
+			"item": [
+				{
+					"name": "localhost:3000/api/projects/{projectId}/issues",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"456b187f-f0a2-4785-bde5-608fc8bafe1b",
+								"issues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}/issues/{issueId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d/issues",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+								"issues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}/issues",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"done\": true,\n  \"dueDate\": \"2018-09-29T08:09:12.422Z\",\n  \"title\": \"string\",\n  \"projectClientId\": \"string\",\n  \"priority\": \"major\",\n  \"clientId\": \"string\",\n  \"projectId\": \"456b187f-f0a2-4785-bde5-608fc8bafe1b\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"456b187f-f0a2-4785-bde5-608fc8bafe1b",
+								"issues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}/issues/{issueId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"done\": true,\n  \"dueDate\": \"2018-09-29T08:09:12.422Z\",\n  \"title\": \"string\",\n  \"projectClientId\": \"string\",\n  \"priority\": \"major\",\n  \"clientId\": \"string\",\n  \"projectId\": \"a49829b9-b2c8-4712-a57b-866e3c5c28f6\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/projects/a49829b9-b2c8-4712-a57b-866e3c5c28f6/issues/a2291660-6301-4768-afb0-92d882cf5c98",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"a49829b9-b2c8-4712-a57b-866e3c5c28f6",
+								"issues",
+								"a2291660-6301-4768-afb0-92d882cf5c98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/projects/{projectId}/isssues/{issueId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues/a2291660-6301-4768-afb0-92d882cf5c98",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"456b187f-f0a2-4785-bde5-608fc8bafe1b",
+								"issues",
+								"a2291660-6301-4768-afb0-92d882cf5c98"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
