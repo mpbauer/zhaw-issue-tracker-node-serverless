@@ -2,9 +2,9 @@
   "lambda": {
     "role": "zhaw-issue-tracker-serverless-executor",
     "name": "zhaw-issue-tracker-serverless",
-    "region": "eu-central-1"
+    "region": "eu-west-1"
   },
   "api": {
-    "id": "4noih032fk"
+    "id": "sgjukq7dae"
   }
 }
