@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var projectRouter = require('./routes/projectRouter');
+var cors = require('cors');
 
 var app = express();
 app.use(bodyParser.urlencoded({
@@ -11,7 +12,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cookieParser());
-
+app.use(cors());
 app.use('/api/projects', projectRouter);
 
 module.exports = app;

@@ -59,7 +59,7 @@ module.exports.updateIssueById = function (req, res) {
         },
         ExpressionAttributeValues: {
             ":done": req.body.done,
-            ":updatedAt": new Date(),
+            ":updatedAt": new Date().toISOString(),
             ":projectClientId": req.body.projectClientId,
             ":projectId": req.body.projectId,
             ":clientId": req.body.clientId,
@@ -93,7 +93,7 @@ module.exports.createIssue = function (req, res) {
             id: uuidv4(),
             done: req.body.done,
             dueDate: req.body.dueDate,
-            createdAt: new Date(),
+            createdAt: new Date().toISOString(),
             projectClientId: req.body.projectClientId,
             projectId: req.body.projectId,
             clientId: req.body.clientId,
@@ -199,7 +199,7 @@ module.exports.createProject = function (req, res) {
             active: req.body.active,
             title: req.body.title,
             clientId: req.body.clientId,
-            createdAt: new Date()
+            createdAt: new Date().toISOString()
         }
     };
     docClient.put(params, function (err, data) {
@@ -237,7 +237,7 @@ module.exports.updateProjectById = function (req, res) {
             ":active": req.body.active,
             ":title": req.body.title,
             ":clientId": req.body.clientId,
-            ":updatedAt": new Date()
+            ":updatedAt": new Date().toISOString()
         },
         ReturnValues: "ALL_NEW"
     };
