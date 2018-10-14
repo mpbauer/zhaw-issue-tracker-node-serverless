@@ -40,31 +40,33 @@ module.exports.updateIssueById = function (req, res) {
     var params = {
         TableName: PROJECT_TABLE,
         Key: {id: projectId},
-        UpdateExpression: "set #active = :active," +
-            "#done = :done," +
+        UpdateExpression: "set #status = :status," +
             "#updatedAt = :updatedAt," +
             "#projectClientId = :projectClientId," +
             "#projectId = :projectId," +
             "#clientId = :clientId," +
-            "#priority = :priority," +
-            "#title = :title",
+            "#severity = :severity," +
+            "#title = :title," +
+            "#description = :description",
         ExpressionAttributeNames: {
-            "#done": "done",
+            "#status": "status",
             "#updatedAt": "updatedAt",
             "#projectClientId": "projectClientId",
             "#projectId": "projectId",
             "#clientId": "clientId",
-            "#priority": "priority",
-            "#title": "title"
+            "#severity": "severity",
+            "#title": "title",
+            "#description": "description"
         },
         ExpressionAttributeValues: {
-            ":done": req.body.done,
+            ":status": req.body.status,
             ":updatedAt": new Date().toISOString(),
             ":projectClientId": req.body.projectClientId,
             ":projectId": req.body.projectId,
             ":clientId": req.body.clientId,
-            ":priority": req.body.priority,
-            ":title": req.body.title
+            ":severity": req.body.severity,
+            ":title": req.body.title,
+            ":description": req.body.description
         },
         ReturnValues: "ALL_NEW"
     };
@@ -91,14 +93,15 @@ module.exports.createIssue = function (req, res) {
         TableName: ISSUE_TABLE,
         Item: {
             id: uuidv4(),
-            done: req.body.done,
+            status: req.body.status,
             dueDate: req.body.dueDate,
             createdAt: new Date().toISOString(),
             projectClientId: req.body.projectClientId,
             projectId: req.body.projectId,
             clientId: req.body.clientId,
-            priority: req.body.priority,
-            title: req.body.title
+            severity: req.body.severity,
+            title: req.body.title,
+            description: req.body.description
         }
     };
     docClient.put(params, function (err, data) {
@@ -198,6 +201,7 @@ module.exports.createProject = function (req, res) {
             id: uuidv4(),
             active: req.body.active,
             title: req.body.title,
+            description: req.body.description,
             clientId: req.body.clientId,
             createdAt: new Date().toISOString()
         }
@@ -225,17 +229,20 @@ module.exports.updateProjectById = function (req, res) {
         Key: {id: projectId},
         UpdateExpression: "set #active = :active," +
             "#title = :title," +
+            "#description = :description," +
             "#clientId = :clientId," +
             "#updatedAt = :updatedAt",
         ExpressionAttributeNames: {
             "#active": "active",
             "#title": "title",
+            "#description": "description",
             "#clientId": "clientId",
             "#updatedAt": "updatedAt"
         },
         ExpressionAttributeValues: {
             ":active": req.body.active,
             ":title": req.body.title,
+            ":description": req.body.description,
             ":clientId": req.body.clientId,
             ":updatedAt": new Date().toISOString()
         },

@@ -9,14 +9,16 @@ router.get('/', projectController.getAllProjects);
 router.get('/:project_id', projectController.getProjectById);
 
 router.post('/', [
-    check('title').exists(),
-    check('clientId').exists(),
+    check('title').isLength({min: 1, max: 50}),
+    check('description').isLength({min: 1, max: 1000}),
+    check('clientId').isUUID(),
     check('active').isBoolean()
 ], projectController.createProject);
 
 router.put('/:project_id', [
     check('title').isLength({min: 1, max: 50}),
-    check('clientId').isLength({min: 1, max: 50}),
+    check('description').isLength({min: 1, max: 1000}),
+    check('clientId').isUUID(),
     check('active').isBoolean()
 ], projectController.updateProjectById);
 
@@ -27,20 +29,24 @@ router.get('/:project_id/issues', projectController.getIssuesByProjectId);
 router.get('/:project_id/issues/:issue_id', projectController.getIssueById);
 router.post('/:project_id/issues', [
     check('title').isLength({min: 1, max: 50}),
-    check('projectClientId').isLength({min: 1, max: 50}),
-    check('projectId').isLength({min: 1, max: 50}),
-    check('clientId').isLength({min: 1, max: 50}),
-    check('priority').isIn(['minor', 'major', 'critical', 'blocker']),
-    check('done').isBoolean()
+    check('description').isLength({min: 1, max: 1000}),
+    check('dueDate').optional().isISO8601(),
+    check('projectClientId').isUUID(),
+    check('projectId').isUUID(),
+    check('clientId').isUUID(),
+    check('severity').isIn(['Minor', 'Major', 'Critical', 'Blocker']),
+    check('status').isIn(['todo', 'in_progress', 'done'])
 ], projectController.createIssue);
 
 router.put('/:project_id/issues/:issue_id', [
     check('title').isLength({min: 1, max: 50}),
-    check('projectClientId').isLength({min: 1, max: 50}),
-    check('projectId').isLength({min: 1, max: 50}),
-    check('clientId').isLength({min: 1, max: 50}),
-    check('priority').isIn(['minor', 'major', 'critical', 'blocker']),
-    check('done').isBoolean()
+    check('description').isLength({min: 1, max: 1000}),
+    check('dueDate').optional().isISO8601(),
+    check('projectClientId').isUUID(),
+    check('projectId').isUUID(),
+    check('clientId').isUUID(),
+    check('severity').isIn(['Minor', 'Major', 'Critical', 'Blocker']),
+    check('status').isIn(['todo', 'in_progress', 'done'])
 ], projectController.updateIssueById);
 
 router.delete('/:project_id/issues/:issue_id', projectController.deleteIssueById);
