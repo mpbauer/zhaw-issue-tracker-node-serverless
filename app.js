@@ -10,9 +10,16 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
 app.use(logger('dev'));
 app.use(cookieParser());
-app.use(cors());
+
 app.use('/api/projects', projectRouter);
 
 module.exports = app;
