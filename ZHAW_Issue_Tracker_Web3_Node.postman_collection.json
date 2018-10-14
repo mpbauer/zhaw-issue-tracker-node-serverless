@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "d8bf50a6-5f9a-4fa8-8626-68769986f567",
-		"name": "ZHAW_Issue_Tracker_Web3_Node",
+		"_postman_id": "04629141-09b1-4d7d-8acf-fdcac816a16f",
+		"name": "ZHAW_Issue_Tracker_Web3_Node copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -13,14 +13,22 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "localhost:3000/api/projects/",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								""
@@ -34,14 +42,22 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "localhost:3000/api/projects/a49829b9-b2c8-4712-a57b-866e3c5c28f6",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/a49829b9-b2c8-4712-a57b-866e3c5c28f6",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								"a49829b9-b2c8-4712-a57b-866e3c5c28f6"
@@ -63,15 +79,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"createdAt\": \"2018-09-28T16:49:13.114Z\",\n  \"updatedAt\": \"2018-09-28T16:49:13.114Z\",\n  \"clientId\": \"string\",\n  \"title\": \"string\",\n  \"active\": true\n}"
+							"raw": "{\n  \"clientId\": \"a3587da9-6dc4-4596-bd8a-08d905429fa9\",\n  \"title\": \"ZHAW - Computer Science\",\n  \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n  \"active\": true\n}"
 						},
 						"url": {
-							"raw": "localhost:3000/api/projects",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects"
 							]
@@ -91,15 +112,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"createdAt\": \"2018-09-28T16:49:13.114Z\",\n  \"updatedAt\": \"2018-09-28T16:49:13.114Z\",\n  \"clientId\": \"string\",\n  \"title\": \"string\",\n  \"active\": true\n}"
+							"raw": "{\n    \"id\": \"692581fc-5dc9-46ac-95cf-fcad21c24a07\",\n    \"active\": true,\n    \"title\": \"ZHAW - Computer Science\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"clientId\": \"a3587da9-6dc4-4596-bd8a-08d905429fa9\",\n    \"createdAt\": \"2018-10-14T11:23:54.732Z\"\n}"
 						},
 						"url": {
-							"raw": "localhost:3000/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								"cecc8e08-8f55-487a-8fe9-9fb1be37a99d"
@@ -113,14 +139,22 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "localhost:3000/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								"cecc8e08-8f55-487a-8fe9-9fb1be37a99d"
@@ -139,17 +173,25 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "localhost:3000/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/8e51e9a3-99fa-4731-b54b-1a61c8e07d4b/issues",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
-								"456b187f-f0a2-4785-bde5-608fc8bafe1b",
+								"8e51e9a3-99fa-4731-b54b-1a61c8e07d4b",
 								"issues"
 							]
 						}
@@ -161,14 +203,22 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "localhost:3000/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d/issues",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/cecc8e08-8f55-487a-8fe9-9fb1be37a99d/issues",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								"cecc8e08-8f55-487a-8fe9-9fb1be37a99d",
@@ -190,18 +240,23 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"done\": true,\n  \"dueDate\": \"2018-09-29T08:09:12.422Z\",\n  \"title\": \"string\",\n  \"projectClientId\": \"string\",\n  \"priority\": \"major\",\n  \"clientId\": \"string\",\n  \"projectId\": \"456b187f-f0a2-4785-bde5-608fc8bafe1b\"\n}"
+							"raw": "{\n  \"title\": \"Issue #1\",\n  \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n  \"dueDate\": \"2018-09-29T08:09:12.422Z\",\n  \"projectClientId\": \"a3587da9-6dc4-4596-bd8a-08d905429fa9\",\n  \"clientId\": \"456b187f-f0a2-4785-bde5-608fc8bafe1b\",\n  \"projectId\": \"a3587da9-6dc4-4596-bd8a-08d905429fa9\",\n  \"severity\": \"Major\",\n  \"status\": \"todo\"\n}"
 						},
 						"url": {
-							"raw": "localhost:3000/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/1b276273-7ce2-45ef-98bb-e582896dc2c5/issues",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
-								"456b187f-f0a2-4785-bde5-608fc8bafe1b",
+								"1b276273-7ce2-45ef-98bb-e582896dc2c5",
 								"issues"
 							]
 						}
@@ -220,15 +275,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"done\": true,\n  \"dueDate\": \"2018-09-29T08:09:12.422Z\",\n  \"title\": \"string\",\n  \"projectClientId\": \"string\",\n  \"priority\": \"major\",\n  \"clientId\": \"string\",\n  \"projectId\": \"a49829b9-b2c8-4712-a57b-866e3c5c28f6\"\n}"
+							"raw": "{\n    \"id\": \"f4b09095-0559-4c4a-be98-56b5b16aae91\",\n    \"status\": \"todo\",\n    \"dueDate\": \"2018-09-29T08:09:12.422Z\",\n    \"createdAt\": \"2018-10-14T11:44:02.650Z\",\n    \"projectClientId\": \"a3587da9-6dc4-4596-bd8a-08d905429fa9\",\n    \"projectId\": \"a3587da9-6dc4-4596-bd8a-08d905429fa9\",\n    \"clientId\": \"456b187f-f0a2-4785-bde5-608fc8bafe1b\",\n    \"severity\": \"Major\",\n    \"title\": \"Issue #1\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\"\n}"
 						},
 						"url": {
-							"raw": "localhost:3000/api/projects/a49829b9-b2c8-4712-a57b-866e3c5c28f6/issues/a2291660-6301-4768-afb0-92d882cf5c98",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/a49829b9-b2c8-4712-a57b-866e3c5c28f6/issues/a2291660-6301-4768-afb0-92d882cf5c98",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								"a49829b9-b2c8-4712-a57b-866e3c5c28f6",
@@ -244,14 +304,22 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "localhost:3000/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues/a2291660-6301-4768-afb0-92d882cf5c98",
+							"raw": "https://309bxpg45b.execute-api.eu-west-1.amazonaws.com/latest/api/projects/456b187f-f0a2-4785-bde5-608fc8bafe1b/issues/a2291660-6301-4768-afb0-92d882cf5c98",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"309bxpg45b",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
+								"latest",
 								"api",
 								"projects",
 								"456b187f-f0a2-4785-bde5-608fc8bafe1b",
