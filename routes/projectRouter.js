@@ -10,14 +10,14 @@ router.get('/:project_id', projectController.getProjectById);
 
 router.post('/', [
     check('title').isLength({min: 1, max: 50}),
-    check('description').isLength({min: 1, max: 1000}),
+    check('description').isLength({min: 1, max: 150}),
     check('clientId').isUUID(),
     check('active').isBoolean()
 ], projectController.createProject);
 
 router.put('/:project_id', [
     check('title').isLength({min: 1, max: 50}),
-    check('description').isLength({min: 1, max: 1000}),
+    check('description').isLength({min: 1, max: 150}),
     check('clientId').isUUID(),
     check('active').isBoolean()
 ], projectController.updateProjectById);
@@ -29,7 +29,7 @@ router.get('/:project_id/issues', projectController.getIssuesByProjectId);
 router.get('/:project_id/issues/:issue_id', projectController.getIssueById);
 router.post('/:project_id/issues', [
     check('title').isLength({min: 1, max: 50}),
-    check('description').isLength({min: 1, max: 1000}),
+    check('description').isLength({min: 1, max: 150}),
     check('dueDate').optional().isISO8601(),
     check('projectClientId').isUUID(),
     check('projectId').isUUID(),
@@ -40,7 +40,7 @@ router.post('/:project_id/issues', [
 
 router.put('/:project_id/issues/:issue_id', [
     check('title').isLength({min: 1, max: 50}),
-    check('description').isLength({min: 1, max: 1000}),
+    check('description').isLength({min: 1, max: 150}),
     check('dueDate').optional().isISO8601(),
     check('projectClientId').isUUID(),
     check('projectId').isUUID(),
