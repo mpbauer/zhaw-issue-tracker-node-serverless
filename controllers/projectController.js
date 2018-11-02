@@ -38,8 +38,8 @@ module.exports.updateIssueById = function (req, res) {
         return res.sendStatus(400);
     }
     var params = {
-        TableName: PROJECT_TABLE,
-        Key: {id: projectId},
+        TableName: ISSUE_TABLE,
+        Key: {id: issueId},
         UpdateExpression: "set #status = :status," +
             "#updatedAt = :updatedAt," +
             "#projectClientId = :projectClientId," +
@@ -88,7 +88,6 @@ module.exports.createIssue = function (req, res) {
     if (!projectId) {
         return res.sendStatus(400);
     }
-    console.log(req.body);
     let params = {
         TableName: ISSUE_TABLE,
         Item: {
@@ -119,8 +118,6 @@ module.exports.getIssueById = function (req, res) {
     if (!projectId || !issueId) {
         return res.sendStatus(400);
     }
-    console.log(projectId);
-    console.log(issueId);
     var params = {
         TableName: ISSUE_TABLE,
         Key: {
